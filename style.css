@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f7ff; /* Light blue background */
+    color: #333; /* Dark blue text */
+}
+header {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 40px; /* Smaller header height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioning context for ::after */
+}
+nav {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative; /* Position for pseudo-element */
+    padding-right: 10px; /* Add padding to the right for the line */
+    font-size: 18px; /* Increase font size */
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 150%; /* Position the line at the right side of the link */
+    top: 0; /* Center vertically */
+    height: 420%; /* Extend the line to the full height of the header */
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3); /* Faded white */
+    transform: translateY(-50%); /* Center vertically */
+}
+#language-switch a::after {
+    display: none;
+}
+nav a:last-child::after {
+    display: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Adjust for stacked sections */
+}
+.projects {
+    flex: 1; /* Adjust for stacked sections */
+}
+.project {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.project:last-child {
+    border-bottom: none;
+}
+.project h3 {
+    margin-top: 0;
+}
+.project p {
+    margin-bottom: 10px;
+}
+footer {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.who-am-i {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Add space below section */
+}
+.who-am-i p {
+    flex: 1;
+    margin-right: 20px; /* Add space between text and image */
+}
+.who-am-i img {
+    border-radius: 50%; /* Make image round */
+    width: 200px; /* Set image width */
+    height: 200px; /* Set image height */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+#section0 h1 {
+    text-align: center;
+}
+hr {
+    width: 100%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the line horizontally */
+}
+/* Language Switch Styles */
+#language-switch {
+    font-size: 18px; /* Increase font size */
+    position: relative;
+}
+#language-switch a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 5px;
+}
+#language-switch .selected-language {
+    background-color: white;
+    color: #007bff; /* Blue text */
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer; /* Add cursor pointer */
+}
