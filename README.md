@@ -1,1 +1,2 @@
-# personal_website
+# Personal Website Base
+Simple base for a personal website.
