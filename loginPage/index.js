@@ -3,7 +3,7 @@ function login() {
     var password = document.getElementById("passwordInput").value;
     
     if (username !== "" && password !== "") {
-        window.location.href = "teste.html";
+        window.location.href = "http://127.0.0.1:5500/personal_website/index.html";
         return false; // Evita o comportamento padrão do envio do formulário
     }
 }
